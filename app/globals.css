@@ -1,26 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;1,400&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@1,400;1,600&display=swap');
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --font-bebas: 'Bebas Neue', sans-serif;
+  --font-space: 'Space Grotesk', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --font-body: 'Inter', sans-serif;
+  --font-serif: 'Playfair Display', serif;
+
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #121212;
+  --bg-tertiary: #181818;
+  --bg-surface: #1e1e1e;
+
+  --text-primary: #f5f5f0;
+  --text-secondary: #a0a09d;
+  --text-muted: #6b6b68;
+
+  --accent-cyan: #00f0ff;
+  --accent-blue: #00b4d8;
+  --accent-cream: #f4eee2;
+  --accent-coral: #ff5e5e;
+
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-medium: rgba(255, 255, 255, 0.16);
+  --border-active: rgba(0, 240, 255, 0.4);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  scroll-behavior: auto;
+  /* Handled by Lenis */
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+  position: relative;
+  background-color: #0a0a0a;
+  color: #f5f5f0;
+}
+
+/* Custom Typography Utilities */
+.font-bebas {
+  font-family: var(--font-bebas);
+  letter-spacing: 0.03em;
+}
+
+.font-space {
+  font-family: var(--font-space);
+}
+
+.font-mono-tech {
+  font-family: var(--font-mono);
+  letter-spacing: -0.02em;
+}
+
+.font-editorial-serif {
+  font-family: var(--font-serif);
+}
+
+/* Subtle Notebook Ledger / Editorial Grid Backgrounds */
+.bg-notebook-lines {
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 100% 32px;
+}
+
+.bg-editorial-grid {
+  background-size: 40px 40px;
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+}
+
+.bg-dot-pattern {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Subtle noise texture */
+.noise-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  content: "";
+  opacity: 0.028;
+  pointer-events: none;
+  z-index: 9999;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Washi Tape and Scrapbook Elements */
+.washi-tape {
+  position: absolute;
+  height: 26px;
+  width: 110px;
+  background: rgba(0, 240, 255, 0.22);
+  backdrop-filter: blur(2px);
+  border: 1px dashed rgba(0, 240, 255, 0.35);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  pointer-events: none;
+  z-index: 10;
+}
+
+.washi-tape-cyan {
+  background: rgba(0, 240, 255, 0.22);
+  border: 1px dashed rgba(0, 240, 255, 0.35);
+}
+
+.washi-tape-blue {
+  background: rgba(0, 180, 255, 0.25);
+  border: 1px dashed rgba(0, 180, 255, 0.4);
+}
+
+.washi-tape-coral {
+  background: rgba(255, 94, 94, 0.22);
+  border: 1px dashed rgba(255, 94, 94, 0.35);
+}
+
+.washi-tape-kraft {
+  background: rgba(224, 195, 150, 0.28);
+  border: 1px dashed rgba(224, 195, 150, 0.4);
+}
+
+/* Polaroid Card Frame */
+.polaroid-frame {
+  background: #151515;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 12px 12px 28px 12px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+  position: relative;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease;
+}
+
+.polaroid-frame:hover {
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 240, 255, 0.15);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #262626;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00f0ff;
+}
+
+/* Interactive Text Reveal & Clipping */
+.clip-text-reveal {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+/* Custom Selection */
+::selection {
+  background: #00f0ff;
+  color: #0a0a0a;
+}
+
+/* Reduced Motion Safety */
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
