@@ -21,7 +21,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
   if (project.cardLayout === "editorial-split") {
     return (
       <div
-        className="group relative bg-[#0e0e0e] border border-white/10 rounded-sm p-6 lg:p-10 transition-all duration-500 hover:border-[#00f0ff]/50"
+        className="group relative bg-[#0e0e0e] border border-white/10 rounded-sm p-6 lg:p-10 transition-all duration-500"
         onMouseEnter={() => {
           setIsHovered(true);
           playPop();
@@ -38,13 +38,13 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
           <div className="lg:col-span-5 min-w-0 overflow-hidden flex flex-col justify-between h-full order-2 lg:order-1">
             <div>
               <div className="flex items-center gap-3 mb-4 flex-wrap">
-                <TechBadge label="CLIENT" value={project.client} />
+                <TechBadge label="CLIENT" value={project.client} color="yellow" />
                 <span className="text-white/20">•</span>
-                <span className="font-mono-tech text-[11px] text-[#00f0ff]">{project.category}</span>
+                <span className="font-mono-tech text-[11px] text-[#ffe600]">{project.category}</span>
               </div>
 
-              <Link href={`/projects/${project.slug}`} className="block group-hover:text-[#00f0ff] transition-colors max-w-full overflow-hidden">
-                <h3 className="font-bebas text-4xl sm:text-5xl lg:text-5xl xl:text-6xl tracking-tight leading-[0.92] mb-3 max-w-full break-words">
+              <Link href={`/projects/${project.slug}`} className="block text-white max-w-full overflow-hidden">
+                <h3 className="font-bebas text-4xl sm:text-5xl lg:text-5xl xl:text-6xl text-white tracking-tight leading-[0.92] mb-3 max-w-full break-words">
                   {project.title}
                 </h3>
               </Link>
@@ -71,7 +71,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
               <div className="flex items-center gap-6">
                 {project.results.slice(0, 2).map((res) => (
                   <div key={res.label}>
-                    <div className="font-bebas text-2xl sm:text-3xl text-[#00f0ff]">{res.metric}</div>
+                    <div className="font-bebas text-2xl sm:text-3xl text-[#00e676]">{res.metric}</div>
                     <div className="font-mono-tech text-[9px] text-white/50 uppercase">{res.label}</div>
                   </div>
                 ))}
@@ -115,7 +115,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
               
               {/* Overlay Stamp */}
               <div className="absolute bottom-4 right-4 z-10">
-                <Stamp text="FEATURED CASE" variant="cyan" rotate={2} />
+                <Stamp text="FEATURED CASE" variant="yellow" rotate={2} />
               </div>
             </Link>
           </div>
@@ -128,7 +128,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
   if (project.cardLayout === "two-column") {
     return (
       <div
-        className="group relative bg-[#0e0e0e] border border-white/10 rounded-sm p-6 lg:p-10 transition-all duration-500 hover:border-[#00f0ff]/50"
+        className="group relative bg-[#0e0e0e] border border-white/10 rounded-sm p-6 lg:p-10 transition-all duration-500"
         onMouseEnter={() => {
           setIsHovered(true);
           playPop();
@@ -136,7 +136,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
         onMouseLeave={() => setIsHovered(false)}
       >
         <div className="absolute -top-3 right-8 z-20">
-          <WashiTape color="cyan" text={`FINE JEWELRY // ${project.year}`} width="w-48" rotate={2} />
+          <WashiTape color="red" text={`FINE JEWELRY // ${project.year}`} width="w-48" rotate={2} />
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
@@ -152,7 +152,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-30 transition-opacity" />
               <div className="absolute top-4 left-4 z-10">
-                <Stamp text="HIGH LUXURY DTC" variant="cyan" rotate={-2} />
+                <Stamp text="HIGH LUXURY DTC" variant="pink" rotate={-2} />
               </div>
             </Link>
           </div>
@@ -161,13 +161,13 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
           <div className="lg:col-span-5 min-w-0 overflow-hidden flex flex-col justify-between h-full">
             <div>
               <div className="flex items-center gap-3 mb-4 flex-wrap">
-                <TechBadge label="CLIENT" value={project.client} />
+                <TechBadge label="CLIENT" value={project.client} color="pink" />
                 <span className="text-white/20">•</span>
-                <span className="font-mono-tech text-[11px] text-[#00f0ff]">{project.category}</span>
+                <span className="font-mono-tech text-[11px] text-[#ff70a6]">{project.category}</span>
               </div>
 
-              <Link href={`/projects/${project.slug}`} className="block group-hover:text-[#00f0ff] transition-colors max-w-full overflow-hidden">
-                <h3 className="font-bebas text-4xl sm:text-5xl lg:text-5xl xl:text-6xl tracking-tight leading-[0.92] mb-3 max-w-full break-words">
+              <Link href={`/projects/${project.slug}`} className="block text-white max-w-full overflow-hidden">
+                <h3 className="font-bebas text-4xl sm:text-5xl lg:text-5xl xl:text-6xl text-white tracking-tight leading-[0.92] mb-3 max-w-full break-words">
                   {project.title}
                 </h3>
               </Link>
@@ -192,7 +192,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
               <div className="flex items-center gap-6">
                 {project.results.slice(0, 2).map((res) => (
                   <div key={res.label}>
-                    <div className="font-bebas text-2xl sm:text-3xl text-[#00f0ff]">{res.metric}</div>
+                    <div className="font-bebas text-2xl sm:text-3xl text-[#ff4d4d]">{res.metric}</div>
                     <div className="font-mono-tech text-[9px] text-white/50 uppercase">{res.label}</div>
                   </div>
                 ))}
@@ -229,7 +229,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
   if (project.cardLayout === "full-width") {
     return (
       <div
-        className="group relative bg-[#0e0e0e] border border-white/10 rounded-sm overflow-hidden transition-all duration-500 hover:border-[#ff5e5e]/50"
+        className="group relative bg-[#0e0e0e] border border-white/10 rounded-sm overflow-hidden transition-all duration-500"
         onMouseEnter={() => {
           setIsHovered(true);
           playPop();
@@ -237,7 +237,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
         onMouseLeave={() => setIsHovered(false)}
       >
         <div className="absolute top-4 left-6 z-20">
-          <WashiTape color="coral" text={`FASHION ATELIER // ${project.year}`} width="w-48" rotate={-1} />
+          <WashiTape color="pink" text={`FASHION ATELIER // ${project.year}`} width="w-48" rotate={-1} />
         </div>
 
         {/* Large visual banner */}
@@ -253,17 +253,17 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
 
           {/* Floating stamp */}
           <div className="absolute top-4 right-6 z-10 hidden sm:block">
-            <Stamp text="SLOW FASHION ATELIER" variant="coral" rotate={3} />
+            <Stamp text="SLOW FASHION ATELIER" variant="yellow" rotate={3} />
           </div>
 
           {/* Bottom title banner on image */}
           <div className="absolute bottom-6 left-6 right-6 flex flex-col md:flex-row md:items-end justify-between gap-4">
             <div className="min-w-0 max-w-full overflow-hidden">
-              <div className="font-mono-tech text-xs text-[#ff5e5e] mb-1 tracking-wider uppercase">
+              <div className="font-mono-tech text-xs text-[#ff70a6] mb-1 tracking-wider uppercase">
                 {project.category}
               </div>
               <Link href={`/projects/${project.slug}`} className="block max-w-full">
-                <h3 className="font-bebas text-5xl sm:text-7xl lg:text-8xl text-white group-hover:text-[#ff5e5e] transition-colors leading-[0.9] max-w-full break-words">
+                <h3 className="font-bebas text-5xl sm:text-7xl lg:text-8xl text-white leading-[0.9] max-w-full break-words">
                   {project.title}
                 </h3>
               </Link>
@@ -283,7 +283,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
 
               <Link
                 href={`/projects/${project.slug}`}
-                className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#ff5e5e] text-black font-mono-tech text-xs font-bold uppercase tracking-wider rounded-sm hover:bg-white transition-all shadow-lg"
+                className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#ff70a6] text-black font-mono-tech text-xs font-bold uppercase tracking-wider rounded-sm hover:bg-white transition-all shadow-lg"
               >
                 <span>EXPLORE CASE STUDY</span>
                 <ArrowUpRight size={14} />
@@ -318,7 +318,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
   if (project.cardLayout === "asymmetric") {
     return (
       <div
-        className="group relative bg-[#0e0e0e] border border-white/10 rounded-sm p-6 lg:p-10 transition-all duration-500 hover:border-[#d4b483]/50"
+        className="group relative bg-[#0e0e0e] border border-white/10 rounded-sm p-6 lg:p-10 transition-all duration-500"
         onMouseEnter={() => {
           setIsHovered(true);
           playPop();
@@ -326,7 +326,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
         onMouseLeave={() => setIsHovered(false)}
       >
         <div className="absolute -top-3 left-10 z-20">
-          <WashiTape color="kraft" text={`HANDLOOM WEAVERS // ${project.year}`} width="w-52" rotate={-2} />
+          <WashiTape color="green" text={`HANDLOOM WEAVERS // ${project.year}`} width="w-52" rotate={-2} />
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
@@ -334,13 +334,13 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
           <div className="lg:col-span-5 min-w-0 overflow-hidden flex flex-col justify-between h-full">
             <div>
               <div className="flex items-center gap-3 mb-4 flex-wrap">
-                <TechBadge label="IMPACT" value="17,000+ ARTISANS" />
+                <TechBadge label="IMPACT" value="17,000+ ARTISANS" color="green" />
                 <span className="text-white/20">•</span>
-                <span className="font-mono-tech text-[11px] text-[#d4b483]">{project.category}</span>
+                <span className="font-mono-tech text-[11px] text-[#00e676]">{project.category}</span>
               </div>
 
-              <Link href={`/projects/${project.slug}`} className="block group-hover:text-[#d4b483] transition-colors max-w-full overflow-hidden">
-                <h3 className="font-bebas text-4xl sm:text-5xl lg:text-5xl xl:text-6xl tracking-tight leading-[0.92] mb-3 max-w-full break-words">
+              <Link href={`/projects/${project.slug}`} className="block text-white max-w-full overflow-hidden">
+                <h3 className="font-bebas text-4xl sm:text-5xl lg:text-5xl xl:text-6xl text-white tracking-tight leading-[0.92] mb-3 max-w-full break-words">
                   {project.title}
                 </h3>
               </Link>
@@ -351,7 +351,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
 
               {/* Scrapbook Note */}
               <div className="p-3.5 bg-[#171717] border border-white/10 rounded-sm mb-6 relative">
-                <div className="font-mono-tech text-[10px] text-[#d4b483] uppercase mb-1">
+                <div className="font-mono-tech text-[10px] text-[#00e676] uppercase mb-1">
                   ✦ WEAVER EMPOWERMENT SYSTEM
                 </div>
                 <div className="text-xs text-white/70 italic">
@@ -375,7 +375,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
               <div className="flex items-center gap-6">
                 {project.results.slice(0, 2).map((res) => (
                   <div key={res.label}>
-                    <div className="font-bebas text-2xl sm:text-3xl text-[#d4b483]">{res.metric}</div>
+                    <div className="font-bebas text-2xl sm:text-3xl text-[#00e676]">{res.metric}</div>
                     <div className="font-mono-tech text-[9px] text-white/50 uppercase">{res.label}</div>
                   </div>
                 ))}
@@ -418,7 +418,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-30 transition-opacity" />
               </Link>
               <div className="absolute -bottom-4 -left-4 z-10">
-                <Stamp text="AUTHENTIC HANDLOOM" variant="white" rotate={-3} />
+                <Stamp text="AUTHENTIC HANDLOOM" variant="green" rotate={-3} />
               </div>
             </div>
           </div>
@@ -431,7 +431,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
   if (project.cardLayout === "polaroid-collage") {
     return (
       <div
-        className="group relative bg-[#0e0e0e] border border-white/10 rounded-sm p-6 lg:p-10 transition-all duration-500 hover:border-white/40"
+        className="group relative bg-[#0e0e0e] border border-white/10 rounded-sm p-6 lg:p-10 transition-all duration-500"
         onMouseEnter={() => {
           setIsHovered(true);
           playPop();
@@ -439,7 +439,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
         onMouseLeave={() => setIsHovered(false)}
       >
         <div className="absolute -top-3 right-12 z-20">
-          <WashiTape color="cyan" text={`925 STERLING SILVER // ${project.year}`} width="w-52" rotate={1} />
+          <WashiTape color="purple" text={`925 STERLING SILVER // ${project.year}`} width="w-52" rotate={1} />
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
@@ -447,7 +447,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
           <div className="lg:col-span-7">
             <div className="polaroid-frame rounded-sm">
               <div className="absolute -top-4 left-1/2 -translate-x-1/2 z-20">
-                <WashiTape color="cyan" text="BIS HALLMARKED" width="w-36" rotate={-2} />
+                <WashiTape color="pink" text="BIS HALLMARKED" width="w-36" rotate={-2} />
               </div>
 
               <Link href={`/projects/${project.slug}`} className="block relative aspect-[16/10] overflow-hidden bg-black">
@@ -471,13 +471,13 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
           <div className="lg:col-span-5 min-w-0 overflow-hidden flex flex-col justify-between h-full">
             <div>
               <div className="flex items-center gap-3 mb-4 flex-wrap">
-                <TechBadge label="CLIENT" value={project.client} />
+                <TechBadge label="CLIENT" value={project.client} color="purple" />
                 <span className="text-white/20">•</span>
-                <span className="font-mono-tech text-[11px] text-white/80">{project.category}</span>
+                <span className="font-mono-tech text-[11px] text-[#b388ff]">{project.category}</span>
               </div>
 
-              <Link href={`/projects/${project.slug}`} className="block group-hover:text-white transition-colors max-w-full overflow-hidden">
-                <h3 className="font-bebas text-3xl sm:text-5xl lg:text-5xl xl:text-6xl tracking-tight leading-[0.92] mb-3 max-w-full break-words">
+              <Link href={`/projects/${project.slug}`} className="block text-white max-w-full overflow-hidden">
+                <h3 className="font-bebas text-3xl sm:text-5xl lg:text-5xl xl:text-6xl text-white tracking-tight leading-[0.92] mb-3 max-w-full break-words">
                   {project.title}
                 </h3>
               </Link>
@@ -502,7 +502,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
               <div className="flex items-center gap-6">
                 {project.results.slice(0, 2).map((res) => (
                   <div key={res.label}>
-                    <div className="font-bebas text-2xl sm:text-3xl text-white">{res.metric}</div>
+                    <div className="font-bebas text-2xl sm:text-3xl text-[#b388ff]">{res.metric}</div>
                     <div className="font-mono-tech text-[9px] text-white/50 uppercase">{res.label}</div>
                   </div>
                 ))}
@@ -538,7 +538,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
   // Default / Layout 6: Candy Showcase (Mahak - 06)
   return (
     <div
-      className="group relative bg-[#0e0e0e] border border-white/10 rounded-sm p-6 lg:p-10 transition-all duration-500 hover:border-[#00f0ff]/50"
+      className="group relative bg-[#0e0e0e] border border-white/10 rounded-sm p-6 lg:p-10 transition-all duration-500"
       onMouseEnter={() => {
         setIsHovered(true);
         playPop();
@@ -546,7 +546,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
       onMouseLeave={() => setIsHovered(false)}
     >
       <div className="absolute -top-3 left-8 z-20">
-        <WashiTape color="cyan" text={`FMCG & D2C // ${project.year}`} width="w-44" rotate={-2} />
+        <WashiTape color="yellow" text={`FMCG & D2C // ${project.year}`} width="w-44" rotate={-2} />
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
@@ -554,13 +554,13 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
         <div className="lg:col-span-5 min-w-0 overflow-hidden flex flex-col justify-between h-full order-2 lg:order-1">
           <div>
             <div className="flex items-center gap-3 mb-4 flex-wrap">
-              <TechBadge label="REACH" value="3.2M+ MONTHLY" />
+              <TechBadge label="REACH" value="3.2M+ MONTHLY" color="yellow" />
               <span className="text-white/20">•</span>
-              <span className="font-mono-tech text-[11px] text-[#00f0ff]">{project.category}</span>
+              <span className="font-mono-tech text-[11px] text-[#ffe600]">{project.category}</span>
             </div>
 
-            <Link href={`/projects/${project.slug}`} className="block group-hover:text-[#00f0ff] transition-colors max-w-full overflow-hidden">
-              <h3 className="font-bebas text-4xl sm:text-5xl lg:text-5xl xl:text-6xl tracking-tight leading-[0.92] mb-3 max-w-full break-words">
+            <Link href={`/projects/${project.slug}`} className="block text-white max-w-full overflow-hidden">
+              <h3 className="font-bebas text-4xl sm:text-5xl lg:text-5xl xl:text-6xl text-white tracking-tight leading-[0.92] mb-3 max-w-full break-words">
                 {project.title}
               </h3>
             </Link>
@@ -585,7 +585,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
             <div className="flex items-center gap-6">
               {project.results.slice(0, 2).map((res) => (
                 <div key={res.label}>
-                  <div className="font-bebas text-2xl sm:text-3xl text-[#00f0ff]">{res.metric}</div>
+                  <div className="font-bebas text-2xl sm:text-3xl text-[#ffe600]">{res.metric}</div>
                   <div className="font-mono-tech text-[9px] text-white/50 uppercase">{res.label}</div>
                 </div>
               ))}
@@ -626,7 +626,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-30 transition-opacity" />
             <div className="absolute bottom-4 right-4 z-10">
-              <Stamp text="D2C & B2B ARCHITECTURE" variant="cyan" rotate={-1} />
+              <Stamp text="D2C & B2B ARCHITECTURE" variant="green" rotate={-1} />
             </div>
           </Link>
         </div>

@@ -64,7 +64,7 @@ export function Navbar() {
               className="group flex items-center gap-2 text-white hover:text-[#00f0ff] transition-colors"
             >
               <span className="font-bebas text-2xl tracking-wider uppercase">YASH</span>
-              <span className="font-mono-tech text-[10px] px-1.5 py-0.5 rounded bg-white/10 text-[#00f0ff] group-hover:bg-[#00f0ff] group-hover:text-black transition-all">
+              <span className="font-mono-tech text-[10px] px-1.5 py-0.5 rounded bg-white/10 text-[#ffe600] group-hover:bg-[#ffe600] group-hover:text-black transition-all">
                 DEV/DIR
               </span>
             </Link>
@@ -95,10 +95,10 @@ export function Navbar() {
             {/* Availability status */}
             <div className="flex items-center gap-2 px-2.5 py-1 rounded-full bg-white/5 border border-white/10 font-mono-tech text-[10px] text-white/80">
               <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#00f0ff] opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-[#00f0ff]"></span>
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#00e676] opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-[#00e676]"></span>
               </span>
-              <span className="tracking-wide">AVAILABLE FOR PROJECTS</span>
+              <span className="tracking-wide text-white/90">AVAILABLE FOR PROJECTS</span>
             </div>
 
             {/* Sound Toggle */}

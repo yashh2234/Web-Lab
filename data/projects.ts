@@ -11,7 +11,7 @@ export interface Project {
   liveUrl: string;
   image: string;
   accentColor: string;
-  tapeColor: "acid" | "cyan" | "coral" | "kraft";
+  tapeColor: "pink" | "red" | "yellow" | "green" | "cyan" | "blue" | "orange" | "purple" | "kraft" | "coral" | "acid";
   cardLayout: "editorial-split" | "two-column" | "full-width" | "asymmetric" | "polaroid-collage" | "candy-showcase";
   summary: string;
   challenge: string;
@@ -38,8 +38,8 @@ export const projects: Project[] = [
     platform: "Next.js / Headless Custom Engine",
     liveUrl: "https://teela.in/",
     image: "/images/teela.jpg",
-    accentColor: "#00f0ff",
-    tapeColor: "cyan",
+    accentColor: "#ffe600",
+    tapeColor: "yellow",
     cardLayout: "editorial-split",
     summary:
       "A cinematic digital storefront and bespoke room reservation ecosystem for an exclusive dome retreat in the Aravalli hills of Jaipur.",
@@ -81,8 +81,8 @@ export const projects: Project[] = [
     platform: "Shopify Plus / Next.js Storefront",
     liveUrl: "https://angara.com/",
     image: "/images/angara.jpg",
-    accentColor: "#00F0FF",
-    tapeColor: "cyan",
+    accentColor: "#ff4d4d",
+    tapeColor: "red",
     cardLayout: "two-column",
     summary:
       "Art-directed e-commerce experience for a world leader in handcrafted gemstone and diamond jewelry, featuring real-time carat/metal customizers and international currency adaptation.",
@@ -124,8 +124,8 @@ export const projects: Project[] = [
     platform: "Shopify",
     liveUrl: "https://kaariofficial.in/",
     image: "/images/kaari.jpg",
-    accentColor: "#FF5E5E",
-    tapeColor: "coral",
+    accentColor: "#ff70a6",
+    tapeColor: "pink",
     cardLayout: "full-width",
     summary:
       "An editorial-first fashion atelier storefront celebrating garments made to move with ease, highlighting hand-block craftsmanship and contemporary western-ethnic silhouettes.",
@@ -167,8 +167,8 @@ export const projects: Project[] = [
     platform: "Shopify Plus / GoKwik Integration",
     liveUrl: "https://suta.in/",
     image: "/images/suta.jpg",
-    accentColor: "#D4B483",
-    tapeColor: "kraft",
+    accentColor: "#00e676",
+    tapeColor: "green",
     cardLayout: "asymmetric",
     summary:
       "High-velocity D2C storefront connecting over 17,000 artisanal handloom weavers across India with modern conscious consumers through heartfelt storytelling and frictionless commerce.",
@@ -210,8 +210,8 @@ export const projects: Project[] = [
     platform: "Shopify / Custom Ajax Suite",
     liveUrl: "https://www.impressions925.com/",
     image: "/images/impressions.jpg",
-    accentColor: "#F5F5F0",
-    tapeColor: "cyan",
+    accentColor: "#b388ff",
+    tapeColor: "purple",
     cardLayout: "polaroid-collage",
     summary:
       "A high-contrast, razor-sharp digital storefront for BIS-hallmarked 925 sterling silver rings, chains, and earrings engineered for lightning-quick browsing and effortless buying.",
@@ -253,8 +253,8 @@ export const projects: Project[] = [
     platform: "Shopify Plus / Custom Wholesale App",
     liveUrl: "https://mahakshop.com/",
     image: "/images/mahak.jpg",
-    accentColor: "#00f0ff",
-    tapeColor: "cyan",
+    accentColor: "#ffe600",
+    tapeColor: "yellow",
     cardLayout: "candy-showcase",
     summary:
       "A vibrant, dual-faceted e-commerce ecosystem bringing iconic candies (Mint ChocOn, Fruity Chews) to millions of consumers and wholesale distributors across India.",

@@ -60,7 +60,7 @@ export default function HomePage() {
       <section className="relative min-h-screen pt-32 pb-20 flex flex-col justify-center px-5 sm:px-8 max-w-7xl mx-auto w-full overflow-hidden">
         {/* Subtle background stamps & tape accents */}
         <div className="absolute top-24 right-10 hidden xl:block z-0 pointer-events-none">
-          <WashiTape color="cyan" text="EST. 2020 // EDITORIAL PORTFOLIO" width="w-64" rotate={4} />
+          <WashiTape color="yellow" text="EST. 2020 // EDITORIAL PORTFOLIO" width="w-64" rotate={4} />
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
@@ -68,14 +68,14 @@ export default function HomePage() {
           <div className="lg:col-span-7">
             {/* Eyebrow badge */}
             <div className="flex items-center gap-3 mb-6">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-[#151515] border border-white/10 font-mono-tech text-xs text-[#00f0ff]">
-                <span className="w-2 h-2 rounded-full bg-[#00f0ff] animate-ping" />
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-[#00e676]/10 border border-[#00e676]/30 font-mono-tech text-xs text-[#00e676]">
+                <span className="w-2 h-2 rounded-full bg-[#00e676] animate-ping" />
                 <span className="font-semibold tracking-wider">DIGITAL DESIGNER / DEVELOPER</span>
               </div>
-              <TechBadge label="SYS.VER" value="2026.04" />
+              <TechBadge label="SYS.VER" value="2026.04" color="pink" />
             </div>
 
-            {/* Large Display Heading */}
+            {/* Large Display Heading - Keeping EXPERIENCES in Blue as explicitly requested */}
             <h1 className="font-bebas text-6xl sm:text-8xl lg:text-9xl text-white tracking-tight leading-[0.88] mb-8">
               I DESIGN DIGITAL <br />
               <span className="text-[#00f0ff] inline-block hover:scale-[1.01] transition-transform">
@@ -112,11 +112,11 @@ export default function HomePage() {
               </a>
 
               <div className="hidden sm:flex items-center gap-2 font-mono-tech text-xs text-white/50 pl-4 border-l border-white/10">
-                <span>SHOPIFY PLUS</span>
-                <span className="text-[#00f0ff]">•</span>
-                <span>CREATIVE DEV</span>
-                <span className="text-[#00f0ff]">•</span>
-                <span>UI/UX</span>
+                <span className="text-[#00e676]">SHOPIFY PLUS</span>
+                <span className="text-white/20">•</span>
+                <span className="text-[#ff70a6]">CREATIVE DEV</span>
+                <span className="text-white/20">•</span>
+                <span className="text-[#ffe600]">UI/UX</span>
               </div>
             </div>
           </div>
@@ -127,7 +127,7 @@ export default function HomePage() {
               {/* Polaroid Photo 01 - Teela preview */}
               <div className="polaroid-frame -rotate-2 hover:rotate-0 transition-transform duration-500 z-10">
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-20">
-                  <WashiTape color="cyan" text="TEELA // JAIPUR" width="w-36" rotate={-1} />
+                  <WashiTape color="green" text="TEELA // JAIPUR" width="w-36" rotate={-1} />
                 </div>
                 <div className="relative aspect-[4/3] w-full overflow-hidden bg-black rounded-sm">
                   <Image
@@ -141,14 +141,14 @@ export default function HomePage() {
                 </div>
                 <div className="mt-3 flex items-center justify-between font-mono-tech text-[10px] text-white/60">
                   <span>RESORT & EXP COMMERCE</span>
-                  <span className="text-[#00f0ff]">+64% REVENUE</span>
+                  <span className="text-[#00e676] font-bold">+64% REVENUE</span>
                 </div>
               </div>
 
               {/* Floating Second Small Polaroid - Angara jewelry */}
               <div className="absolute -bottom-8 -right-4 w-44 sm:w-52 polaroid-frame rotate-6 hover:rotate-2 transition-transform duration-500 z-20 hidden sm:block">
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-20">
-                  <WashiTape color="cyan" text="ANGARA DTC" width="w-28" rotate={2} />
+                  <WashiTape color="red" text="ANGARA DTC" width="w-28" rotate={2} />
                 </div>
                 <div className="relative aspect-[1/1] w-full overflow-hidden bg-black rounded-sm">
                   <Image
@@ -159,14 +159,14 @@ export default function HomePage() {
                     className="object-cover"
                   />
                 </div>
-                <div className="mt-2 font-mono-tech text-[9px] text-white/60 text-center">
+                <div className="mt-2 font-mono-tech text-[9px] text-[#ffe600] font-bold text-center">
                   EMERALD CUSTOMIZER
                 </div>
               </div>
 
               {/* Interactive Stamp */}
               <div className="absolute -top-6 -left-6 z-30">
-                <Stamp text="VERIFIED ART DIRECTION" variant="cyan" rotate={-8} />
+                <Stamp text="VERIFIED ART DIRECTION" variant="pink" rotate={-8} />
               </div>
             </div>
           </div>
@@ -175,12 +175,12 @@ export default function HomePage() {
         {/* Hero Bottom Technical Strip */}
         <div className="mt-20 pt-6 border-t border-white/10 flex flex-wrap items-center justify-between gap-4 font-mono-tech text-[11px] text-white/50">
           <div className="flex items-center gap-6">
-            <span>[ FOCUS: E-COMMERCE & LUXURY ]</span>
-            <span className="hidden md:inline-block">[ LOCATION: NEW DELHI // REMOTE WORLDWIDE ]</span>
+            <span className="text-[#ff70a6]">[ FOCUS: E-COMMERCE & LUXURY ]</span>
+            <span className="hidden md:inline-block text-[#00e676]">[ LOCATION: NEW DELHI // REMOTE WORLDWIDE ]</span>
           </div>
           <div className="flex items-center gap-4">
-            <span className="text-[#00f0ff]">SCROLL TO EXPLORE ARCHIVE</span>
-            <ArrowDown size={13} className="animate-bounce text-[#00f0ff]" />
+            <span className="text-[#ffe600]">SCROLL TO EXPLORE ARCHIVE</span>
+            <ArrowDown size={13} className="animate-bounce text-[#ffe600]" />
           </div>
         </div>
       </section>
@@ -192,7 +192,7 @@ export default function HomePage() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left: Punchy Manifesto */}
           <div className="lg:col-span-7">
-            <div className="font-mono-tech text-xs text-[#00f0ff] uppercase tracking-widest mb-4">
+            <div className="font-mono-tech text-xs text-[#ff70a6] uppercase tracking-widest mb-4">
               MANIFESTO // 01
             </div>
 
@@ -217,7 +217,7 @@ export default function HomePage() {
           <div className="lg:col-span-5 flex flex-col gap-5">
             <div className="p-6 bg-[#111111] border border-white/10 rounded-sm relative">
               <div className="absolute -top-3 left-6">
-                <WashiTape color="kraft" text="CORE DISCIPLINES" width="w-36" rotate={-1} />
+                <WashiTape color="yellow" text="CORE DISCIPLINES" width="w-36" rotate={-1} />
               </div>
 
               <div className="font-mono-tech text-xs text-white/50 mb-4 uppercase">
@@ -226,23 +226,23 @@ export default function HomePage() {
 
               <div className="flex flex-wrap gap-2.5">
                 {[
-                  { name: "UI / UX Design", tag: "Figma", color: "cyan" },
-                  { name: "Shopify Plus", tag: "Liquid / API", color: "cyan" },
-                  { name: "Creative Frontend", tag: "Next.js / TS", color: "coral" },
-                  { name: "Motion Physics", tag: "GSAP / Lenis", color: "kraft" },
-                  { name: "Conversion Optimization", tag: "+38% Avg Lift", color: "cyan" },
-                  { name: "Design Systems", tag: "Tokens", color: "cyan" },
+                  { name: "UI / UX Design", tag: "Figma", tape: "pink", tagColor: "text-[#ff70a6]" },
+                  { name: "Shopify Plus", tag: "Liquid / API", tape: "green", tagColor: "text-[#00e676]" },
+                  { name: "Creative Frontend", tag: "Next.js / TS", tape: "yellow", tagColor: "text-[#ffe600]" },
+                  { name: "Motion Physics", tag: "GSAP / Lenis", tape: "red", tagColor: "text-[#ff4d4d]" },
+                  { name: "Conversion Optimization", tag: "+38% Avg Lift", tape: "green", tagColor: "text-[#00e676]" },
+                  { name: "Design Systems", tag: "Tokens", tape: "purple", tagColor: "text-[#b388ff]" },
                 ].map((item, idx) => (
                   <StickyNote
                     key={item.name}
                     color="dark"
-                    tapeColor={item.color as "cyan" | "cyan" | "coral" | "kraft"}
+                    tapeColor={item.tape as any}
                     rotate={idx % 2 === 0 ? -2 : 2}
                     isDraggable
                   >
                     <div className="flex items-center gap-2 font-mono-tech text-xs">
                       <span className="font-bold text-white">{item.name}</span>
-                      <span className="text-[#00f0ff] text-[10px]">/ {item.tag}</span>
+                      <span className={`${item.tagColor} text-[10px]`}>/ {item.tag}</span>
                     </div>
                   </StickyNote>
                 ))}
@@ -264,8 +264,8 @@ export default function HomePage() {
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6 border-b border-white/10 pb-8">
           <div>
-            <div className="flex items-center gap-2 font-mono-tech text-xs text-[#00f0ff] tracking-widest uppercase mb-2">
-              <span className="w-2 h-2 rounded-full bg-[#00f0ff]" />
+            <div className="flex items-center gap-2 font-mono-tech text-xs text-[#00e676] tracking-widest uppercase mb-2">
+              <span className="w-2 h-2 rounded-full bg-[#00e676]" />
               <span>PORTFOLIO EXHIBITION // 2025–2026</span>
             </div>
             <h2 className="font-bebas text-6xl sm:text-8xl text-white tracking-tight leading-none">
@@ -275,7 +275,7 @@ export default function HomePage() {
 
           <div className="flex items-center gap-4 font-mono-tech text-xs text-white/60">
             <span>SHOWING 06 FEATURED CASE STUDIES</span>
-            <Stamp text="REAL COMMERCE" variant="cyan" rotate={-1} />
+            <Stamp text="REAL COMMERCE" variant="yellow" rotate={-1} />
           </div>
         </div>
 
@@ -290,7 +290,7 @@ export default function HomePage() {
         <div className="mt-20 pt-12 border-t border-white/10">
           <div className="flex items-center justify-between mb-8">
             <div>
-              <div className="font-mono-tech text-xs text-[#00f0ff] uppercase tracking-widest mb-1">
+              <div className="font-mono-tech text-xs text-[#ff70a6] uppercase tracking-widest mb-1">
                 PROJECT ARCHIVE
               </div>
               <h3 className="font-bebas text-4xl sm:text-5xl text-white">ADDITIONAL SELECTED WORKS</h3>
@@ -328,7 +328,7 @@ export default function HomePage() {
                       onClick={() => playPop()}
                     >
                       <td className="py-4 px-4 text-white/50">{proj.year}</td>
-                      <td className="py-4 px-4 font-bold text-white group-hover:text-[#00f0ff] flex items-center gap-2">
+                      <td className="py-4 px-4 font-bold text-white flex items-center gap-2">
                         <span>{proj.title}</span>
                         <span className="text-[10px] text-white/40 font-normal">({proj.client})</span>
                       </td>
@@ -361,7 +361,7 @@ export default function HomePage() {
       <section id="services" className="py-24 px-5 sm:px-8 max-w-7xl mx-auto w-full scroll-mt-20 border-t border-white/10">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div>
-            <div className="font-mono-tech text-xs text-[#00f0ff] tracking-widest uppercase mb-2">
+            <div className="font-mono-tech text-xs text-[#ffe600] tracking-widest uppercase mb-2">
               CAPABILITIES & SERVICES
             </div>
             <h2 className="font-bebas text-6xl sm:text-8xl text-white tracking-tight leading-none">
@@ -426,7 +426,7 @@ export default function HomePage() {
           <div className="lg:col-span-5 sticky top-28 hidden lg:block">
             <div className="p-8 bg-[#121212] border border-white/10 rounded-sm relative shadow-2xl">
               <div className="absolute -top-3 right-6">
-                <WashiTape color="cyan" text="SPECIFICATION" width="w-32" rotate={1} />
+                <WashiTape color="pink" text="SPECIFICATION" width="w-32" rotate={1} />
               </div>
 
               <div className="font-mono-tech text-xs text-white/40 uppercase mb-2">
@@ -474,7 +474,7 @@ export default function HomePage() {
             <div className="w-full max-w-sm">
               <div className="polaroid-frame -rotate-1 hover:rotate-0 transition-transform duration-500 shadow-2xl">
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-20">
-                  <WashiTape color="kraft" text="YASH // DESIGN & DEV" width="w-44" rotate={-1} />
+                  <WashiTape color="yellow" text="YASH // DESIGN & DEV" width="w-44" rotate={-1} />
                 </div>
 
                 <div className="relative aspect-[1/1] w-full overflow-hidden bg-black rounded-sm">
@@ -495,7 +495,7 @@ export default function HomePage() {
 
               {/* Sticky note badge */}
               <div className="absolute -bottom-6 -right-4 z-20 hidden sm:block">
-                <StickyNote color="cyan" rotate={3}>
+                <StickyNote color="green" rotate={3}>
                   <div className="font-mono-tech text-[11px] font-bold text-black">
                     (•‿•) 6+ YEARS IN E-COM
                   </div>
@@ -506,7 +506,7 @@ export default function HomePage() {
 
           {/* Right: Personal Editorial Philosophy */}
           <div className="lg:col-span-7">
-            <div className="font-mono-tech text-xs text-[#00f0ff] uppercase tracking-widest mb-3">
+            <div className="font-mono-tech text-xs text-[#ff4d4d] uppercase tracking-widest mb-3">
               ABOUT // PHILOSOPHY
             </div>
 
@@ -540,7 +540,7 @@ export default function HomePage() {
               </div>
               <div>
                 <div className="text-white/40 uppercase mb-1">SPECIALTY</div>
-                <div className="font-bold text-[#00f0ff] text-base">SHOPIFY PLUS</div>
+                <div className="font-bold text-[#00e676] text-base">SHOPIFY PLUS</div>
               </div>
               <div>
                 <div className="text-white/40 uppercase mb-1">AVERAGE LIFT</div>
@@ -561,7 +561,7 @@ export default function HomePage() {
       <section id="process" className="py-24 px-5 sm:px-8 max-w-7xl mx-auto w-full scroll-mt-20 border-t border-white/10">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div>
-            <div className="font-mono-tech text-xs text-[#00f0ff] tracking-widest uppercase mb-2">
+            <div className="font-mono-tech text-xs text-[#ff70a6] tracking-widest uppercase mb-2">
               METHODOLOGY & WORKFLOW
             </div>
             <h2 className="font-bebas text-6xl sm:text-8xl text-white tracking-tight leading-none">
@@ -579,7 +579,7 @@ export default function HomePage() {
           {processSteps.map((step) => (
             <div
               key={step.step}
-              className="p-6 bg-[#111111] border border-white/10 rounded-sm relative flex flex-col justify-between hover:border-[#00f0ff]/50 transition-colors"
+              className="p-6 bg-[#111111] border border-white/10 rounded-sm relative flex flex-col justify-between transition-colors"
             >
               <div className="absolute -top-3 left-6">
                 <WashiTape color={step.tape} text={step.duration} width="w-24" rotate={-1} />
@@ -623,17 +623,17 @@ export default function HomePage() {
       <section className="py-20 px-5 sm:px-8 max-w-7xl mx-auto w-full border-t border-white/10">
         <div className="p-8 sm:p-12 bg-[#0e0e0e] border border-white/10 rounded-sm relative">
           <div className="absolute -top-3 left-8">
-            <WashiTape color="cyan" text="ENGINEERING STACK" width="w-40" rotate={-2} />
+            <WashiTape color="green" text="ENGINEERING STACK" width="w-40" rotate={-2} />
           </div>
 
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8">
             <div>
-              <div className="font-mono-tech text-xs text-[#00f0ff] uppercase mb-1">
+              <div className="font-mono-tech text-xs text-[#00e676] uppercase mb-1">
                 DESIGNER&apos;S NOTEBOOK // TECHNICAL TOOLBOX
               </div>
               <h3 className="font-bebas text-4xl sm:text-5xl text-white">BUILT WITH INTENTION</h3>
             </div>
-            <Stamp text="ZERO BLOAT" variant="white" rotate={1} />
+            <Stamp text="ZERO BLOAT" variant="pink" rotate={1} />
           </div>
 
           <p className="text-[#a0a09d] max-w-2xl font-light text-sm mb-8">
@@ -654,7 +654,7 @@ export default function HomePage() {
             ].map((tech) => (
               <div
                 key={tech.name}
-                className="p-4 bg-[#141414] border border-white/10 rounded-sm hover:border-[#00f0ff] transition-colors"
+                className="p-4 bg-[#141414] border border-white/10 rounded-sm transition-colors"
               >
                 <div className="font-bold text-white mb-1">{tech.name}</div>
                 <div className="text-[10px] text-[#00f0ff]">{tech.tag}</div>
@@ -672,7 +672,7 @@ export default function HomePage() {
           {/* Left Column: Heading & Socials */}
           <div className="lg:col-span-6 flex flex-col justify-between">
             <div>
-              <div className="font-mono-tech text-xs text-[#00f0ff] uppercase tracking-widest mb-3">
+              <div className="font-mono-tech text-xs text-[#00e676] uppercase tracking-widest mb-3">
                 LET&apos;S COLLABORATE
               </div>
 
@@ -740,7 +740,7 @@ export default function HomePage() {
           <div className="lg:col-span-6">
             <div className="p-8 sm:p-10 bg-[#111111] border border-white/10 rounded-sm relative shadow-2xl">
               <div className="absolute -top-3 right-8">
-                <WashiTape color="coral" text="INQUIRY FORM" width="w-32" rotate={2} />
+                <WashiTape color="yellow" text="INQUIRY FORM" width="w-32" rotate={2} />
               </div>
 
               {formSubmitted ? (
